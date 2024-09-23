@@ -7354,6 +7354,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67aeddc4c5d2a04ba0dd0f0cea7814a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 1729285284256563570, guid: 2c209f8d0230be14991d7925d84a82c8, type: 3}
+  baseEnemies: 8
+  enemiesPerSecond: 0.5
+  timeBetweenWaves: 5
+  difficultyScalingFactor: 0.75
 --- !u!1001 &1571042933
 PrefabInstance:
   m_ObjectHideFlags: 0
