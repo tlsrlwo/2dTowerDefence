@@ -32,6 +32,7 @@ namespace TDF
                 // enemy gameObject has reached the end of the path
                 if(pathIndex == LevelManager.main.path.Length)
                 {
+                    EnemySpawner.onEnemyDestroy.Invoke();
                     Destroy(gameObject);
                     return;
                 }
