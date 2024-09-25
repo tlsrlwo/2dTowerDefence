@@ -13,7 +13,7 @@ namespace TDF
         [Header("Attributes")]
         [SerializeField] private int baseEnemies = 8;
         [SerializeField] private float enemiesPerSecond = 0.5f;
-        [SerializeField] private float timeBetweenWaves = 5f;
+        [SerializeField] private float timeBetweenWaves = 3f;
         [SerializeField] private float difficultyScalingFactor = 0.75f;
 
         [Header("Events")]
@@ -87,7 +87,7 @@ namespace TDF
 
         private void SpawnEnemy()
         {
-            Debug.Log("spawn enemy");
+            //Debug.Log("spawn enemy");
             GameObject prefabToSpawn = enemyPrefabs[0];
             Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
             //startPoint 만 쓰면 Transform 값을 Vector3 로 변환시키지 못하기 때문에 뒤에 .position 을 써줌 (Vector3 Transform.position)
