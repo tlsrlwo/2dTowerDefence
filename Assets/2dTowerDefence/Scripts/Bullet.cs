@@ -18,13 +18,14 @@ namespace TDF
 
         public void SetTarget(Transform _target)
         {
+            //터렛의 target 값을 받아옴
             target = _target;
 
         }
 
         private void FixedUpdate()
         {
-            if (!target) return;
+            if (!target) return;  // 타겟의 값이 없으면 식 반환
 
             Vector2 direction = (target.position - transform.position).normalized;
             

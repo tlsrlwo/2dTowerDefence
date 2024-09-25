@@ -38,7 +38,7 @@ namespace TDF
             {
                 target= null; 
             }
-            else
+            else // 타겟이 범위 안에 있음
             {
                 timeUntilFire += Time.deltaTime;
 
