@@ -33,8 +33,18 @@ namespace TDF
         {
             if (tower != null) return;
 
-            GameObject towerToBuild = BuildManager.main.GetSelectedTower();
-            tower = Instantiate(towerToBuild , transform.position, Quaternion.identity);
+            Tower towerToBuild = BuildManager.main.GetSelectedTower();
+
+            if (towerToBuild.cost > LevelManager.main.currency)
+            {
+                Debug.Log("you're poor");
+                return;
+            }
+
+            // ≈Õ∑ø ¡ˆ¿ª µ∑ ¿÷¿∏∏È µ∑ æ∏
+            LevelManager.main.SpendCurrency(towerToBuild.cost);
+
+            tower = Instantiate(towerToBuild.prefab , transform.position, Quaternion.identity);
 
         }
     }

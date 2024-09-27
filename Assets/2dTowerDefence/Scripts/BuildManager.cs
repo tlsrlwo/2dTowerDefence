@@ -9,7 +9,9 @@ namespace TDF
         public static BuildManager main { get; set; }
 
         [Header("References")]
-        [SerializeField] private GameObject[] towerPrefabs;
+        //[SerializeField] private GameObject[] towerPrefabs;
+        [SerializeField] private Tower[] towers;
+
 
         private int selectedTower = 0;
 
@@ -27,21 +29,15 @@ namespace TDF
             }
         }
 
-        public GameObject GetSelectedTower()
+        public Tower GetSelectedTower()
         {
-            return towerPrefabs[selectedTower];
+            return towers[selectedTower];
         }
 
-        // Start is called before the first frame update
-        void Start()
+        public void SetSelectedTower(int _selectedTower)
         {
-        
-        }
+           selectedTower = _selectedTower; 
 
-        // Update is called once per frame
-        void Update()
-        {
-        
         }
     }
 }
